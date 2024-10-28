@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { GoogleOAuthProvider } from "@react-oauth/google"
-import { GoogleLogin } from '@react-oauth/google';
+// import { GoogleOAuthProvider } from '@react-oauth/google';
+// import { GoogleLogin } from '@react-oauth/google';
 // import { GoogleLogin } from 'react-google-login';
 import { FaLinkedin ,FaGithub ,FaGoogle, FaEye, FaEyeSlash } from 'react-icons/fa';
 
@@ -52,13 +52,18 @@ const LoginForm: React.FC = () => {
     }
   };
   
-  const responseMessage = (response:any) => {
-    console.log(response,"response");
-    handleSocialLogin('google',response.credential )
+  const _responseMessage = (response: any) => {
+    console.log(response, "response");
+    handleSocialLogin("google", response.credential);
 };
-const errorMessage = (error:any) => {
+
+const errorMessage = (error: any) => {
     console.log(error);
 };
+
+_responseMessage({ credential: "sampleCredential" });
+errorMessage("Sample error message");
+
 
 const handleLogin = () => {
   const clientId = '1017383357529-k3c7c4sfkbogr0896h3gbnf7i8g63h5i.apps.googleusercontent.com';

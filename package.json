@@ -1,5 +1,5 @@
 {
-  "homepage": "https://logingithub.io/login-react",
+  "homepage": "https://HumzaDilpazeer.github.io/Logintsx",
   "name": "auth",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
